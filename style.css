@@ -1,0 +1,553 @@
+/*Layout *******************/
+
+@font-face {
+    font-family: "Lego Brix";
+    src: url("../tipografia/LEGOBRIX.woff");
+    
+}
+
+/* Definindo a fonte personalizada */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0a0012f5, #0a0012); /* Gradiente de preto para roxo escuro */
+    color: #FFFFFF; 
+      font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+
+   
+
+}
+
+/* Animação de digitação */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animação do cursor piscando */
+@keyframes blink-caret {
+    0% { border-color: transparent; }
+    50% { border-color: white; }
+    100% { border-color: transparent; }
+}
+
+/* Estilo para o título */
+#typed-text {
+    font-size: 3.5rem; /* Fonte um pouco menor */
+    font-weight: 600; /* Peso da fonte */
+    text-align: center; /* Centralizado */
+    text-transform: uppercase; /* Letras maiúsculas */
+    animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite; /* Combinação das animações */
+    overflow: hidden; /* Oculta o texto até a animação começar */
+    border-right: 4px solid #fff; /* Efeito de cursor */
+    white-space: nowrap; /* Impedir a quebra de linha */
+}
+
+
+ /*setinhas*/
+    .navigation-dots {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+    }
+    
+    .navigation-dots .dot {
+        width: 12px;
+        height: 12px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .navigation-dots .dot:hover,
+    .navigation-dots .dot.active {
+        background-color: #9b59b6;
+    }
+    img {
+    
+        border: 1px solid rgb(0, 0, 0);
+    }
+    
+    
+
+/* Configurações Logo*/
+
+.navbar-brand {
+    font-family: "Lego Brix";
+    font-size: 20px;
+    color: white;
+}
+
+.navbar  {
+    background-color: #150e25;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+
+
+.d-flex.img-custom {
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.btn-custom {
+    color: white;
+    border-radius: 500px;
+    -webkit-border-radius: 500px; 
+    -moz-border-radius: 500px; 
+    padding: 10px 20px; 
+}
+
+
+.btn-roxo {
+    background: #752578;
+   }
+
+   .btn-roxo:hover{
+    background: #6207e3;
+    color: white;
+   }
+
+   .align-self-center {
+    color: white;
+   }
+   
+   .d-flex  {
+    text-align: center;
+    justify-content: center;
+}
+
+.col-md-6{
+    justify-content: center;
+    padding: 30px;
+
+
+}
+/*********************Home***********/
+#home {
+
+    line-height: 4.5;
+}
+
+.navbar {
+    background-color: #0e0214da;
+}
+
+.navbar a {
+    color: white;
+}
+
+.btn-custom {
+    background-color: #6f42c1;
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.paragrafo {
+    font-size: 1.2rem;
+}
+
+.img-custom img {
+    border-radius: 50%;
+}
+
+
+/*sobre********************/
+
+
+.sobre-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.particles-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.card-text {
+    background-color: rgba(24, 4, 39, 0.178);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.991);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff8f8; 
+}
+
+.btn-show {
+    background-color: #29093b;
+    color: rgb(255, 251, 251);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.jornada-details {
+    display: none; /* Oculta inicialmente */
+    margin-top: 15px;
+}
+
+
+.img-text {
+    text-align: left;
+}
+
+.perfil-img {
+    width: 400px;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 20px;
+}
+
+.perfil1 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-size: 1.2rem; /* Tamanho da fonte do perfil */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+}
+
+.jornada{
+    justify-content: center;
+    justify-items: center; 
+    font-size: 1.2rem; /* Tamanho da fonte do parágrafo */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+   
+   
+/*-----------Projetos----------*/
+
+#projetos {
+    height: 100vh; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+#projetos {
+    overflow-y: auto; 
+    
+}
+.card-text {
+    color: #29093b;
+}
+
+/*******************Habilidades***************/
+
+#habilidades {
+    padding: 60px 20px; 
+    text-align: center; 
+    background-color: #16031f2d; 
+}
+
+#habilidades .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e8dbdb;
+}
+
+#habilidades p {
+    color: #fffefe;
+    margin-bottom: 40px;
+}
+
+.skill-icon {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2); 
+}
+
+
+/***********contatos***************/
+  .text-center{
+        color:#FFFFFF;
+    }
+
+    .contact-page {
+        padding: 40px 15px;
+        border-radius: 8px;
+    }
+    
+   
+    
+    .contact-form {
+        background: rgb(42 6 59 / 76%); /* Fundo semitransparente */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(255, 253, 253, 0.579);
+    }
+    
+    .contact-form .form-label {
+        font-weight: bold;
+        color: #fdf6ff;
+    }
+    
+    .contact-form .form-control {
+        background: #fffafa; /* Fundo escuro para os campos */
+        color: #ffffff; 
+        border: 1px solid #ffffff; 
+    }
+    
+    .contact-form .form-control:focus {
+        border-color: #6131a1;
+        box-shadow: 0 0 5px #a4c0ce;
+    }
+    
+    .social-links .btn {
+        margin: 10px 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        border: 2px solid transparent;
+    }
+    
+    .social-links .btn-outline-light {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+    
+    .social-links .btn-outline-light:hover {
+        background: #ffffff;
+        color: #0a0012;
+    }
+    
+    .social-links .btn i {
+        margin-right: 5px;
+    }
+
+@media (max-width: 768px) {
+    #typed-text {
+        font-size: 2rem; /* Ajuste para smartphones */
+    }
+    .skill-icon {
+        width: 60px; /* Ajusta o tamanho dos ícones para telas menores */
+    }
+}
+
+/*Rodapé*/
+
+footer {
+    position: relative; 
+    margin-top: 0; 
+    padding: 20px 0;
+}
+
+  
+    
+
+/* Animação de digitação */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animação do cursor piscando */
+@keyframes blink-caret {
+    0% { border-color: transparent; }
+    50% { border-color: white; }
+    100% { border-color: transparent; }
+}
+
+/* Estilo para o título */
+#typed-text {
+    font-size: 3.5rem; 
+    color: white; 
+    font-weight: 600; 
+    text-align: center; 
+    text-transform: uppercase; 
+    animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite; 
+    overflow: hidden; 
+    border-right: 4px solid #fff; 
+    white-space: nowrap; 
+}
+
+/**/
+
+/*****************Media Queries************************/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .row {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 10px;
+    }
+
+    .d-flex {
+        text-align: justify;
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        font-size: 13px;
+    }
+
+    .paragrafo {
+        font-size: 18px;
+    }
+
+    .display-4 {
+        font-size: 3.5em;
+    }
+
+    img {
+        width: 330px; /* Ajustado de 'px' para '330px' */
+        border: 1px solid rgb(0, 0, 0);
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .row {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .d-flex {
+        text-align: justify;
+        justify-content: center;
+    }
+
+    img {
+        width: 350px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .row {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .d-flex {
+        text-align: justify;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    img {
+        width: 355px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .d-flex {
+        text-align: justify;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .row {
+        text-align: center;
+    }
+
+    .img {
+        width: 350px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .d-flex {
+        text-align: justify;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .img {
+        width: 400px;
+    }
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 1200px) {
+    #typed-text {
+        font-size: 2rem; /* Menor tamanho para tablets */
+    }
+}
+
+@media (max-width: 992px) {
+    #typed-text {
+        font-size: 2.5rem; /* Menor tamanho para telas menores */
+    }
+}
+
+@media (max-width: 576px) {
+    #typed-text {
+        font-size: 1.5rem; /* Ajuste para telas muito pequenas */
+    }
+}
+
+@media (max-height: 600px) {
+    #projetos {
+        height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+        padding: 60px 0; /* Adiciona espaçamento suficiente */
+    }
+}
+
+
+
