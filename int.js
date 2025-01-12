@@ -70,3 +70,4 @@ function init() {
 
 // Chamando a função init quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', init);
+

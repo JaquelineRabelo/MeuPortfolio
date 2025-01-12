@@ -6,20 +6,6 @@
     
 }
 
-/* Definindo a fonte personalizada */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #0a0012f5, #0a0012); /* Gradiente de preto para roxo escuro */
-    color: #FFFFFF; 
-      font-family: 'Poppins', sans-serif;
-        background-color: #f8f9fa;
-        margin: 0;
-        padding: 0;
-
-   
-
-}
-
 /* Animação de digitação */
 @keyframes typing {
     from { width: 0; }
@@ -33,9 +19,23 @@ body {
     100% { border-color: transparent; }
 }
 
+
+/* Definindo a fonte personalizada */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0a0012f5, #0a0012); /* Gradiente de preto para roxo escuro */
+    color: #FFFFFF; 
+      font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+  
+
+}
+
 /* Estilo para o título */
 #typed-text {
-    font-size: 3.5rem; /* Fonte um pouco menor */
+    font-size: 1.8rem; /* Fonte um pouco menor */
     font-weight: 600; /* Peso da fonte */
     text-align: center; /* Centralizado */
     text-transform: uppercase; /* Letras maiúsculas */
@@ -44,7 +44,6 @@ body {
     border-right: 4px solid #fff; /* Efeito de cursor */
     white-space: nowrap; /* Impedir a quebra de linha */
 }
-
 
  /*setinhas*/
     .navigation-dots {
@@ -103,13 +102,17 @@ a {
 }
 
 
-
 .d-flex.img-custom {
     text-align: center;
     justify-content: center;
 }
 
-
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+  }
 
 .btn-custom {
     color: white;
@@ -117,6 +120,7 @@ a {
     -webkit-border-radius: 500px; 
     -moz-border-radius: 500px; 
     padding: 10px 20px; 
+    margin-top: 50px;
 }
 
 
@@ -242,7 +246,7 @@ a {
 }
 
 .perfil-img {
-    width: 400px;
+    width: 350px;
     height: auto;
     border-radius: 0px;
     margin-bottom: 20px;
@@ -258,14 +262,18 @@ a {
 .jornada{
     justify-content: center;
     justify-items: center; 
-    font-size: 1.2rem; /* Tamanho da fonte do parágrafo */
-    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    font-size: 1.2rem; 
+    line-height: 1.5; 
     font-size: 1.2rem;
     line-height: 1.5;
 }
 
 .textarea {
     color: #201f20;
+}
+
+.redes-sociais {
+    display: block; /* Mostra o elemento normalmente */
 }
    
    
@@ -330,7 +338,6 @@ a {
     }
     
    
-    
     .contact-form {
         background: rgb(42 6 59 / 76%); /* Fundo semitransparente */
         padding: 20px;
@@ -340,12 +347,12 @@ a {
     
     .contact-form .form-label {
         font-weight: bold;
-        color: #fdf6ff;
+        color: #dccce1;
     }
     
     .contact-form .form-control {
         background: #fffafa; /* Fundo escuro para os campos */
-        color: #ffffff; 
+        color: #000000; 
         border: 1px solid #ffffff; 
     }
     
@@ -376,15 +383,7 @@ a {
     .social-links .btn i {
         margin-right: 5px;
     }
-
-@media (max-width: 768px) {
-    #typed-text {
-        font-size: 2rem; /* Ajuste para smartphones */
-    }
-    .skill-icon {
-        width: 60px; /* Ajusta o tamanho dos ícones para telas menores */
-    }
-}
+  
 
 /*Rodapé*/
 
@@ -394,111 +393,320 @@ footer {
     padding: 20px 0;
 }
 
-  
-    
-
-/* Animação de digitação */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-/* Animação do cursor piscando */
-@keyframes blink-caret {
-    0% { border-color: transparent; }
-    50% { border-color: white; }
-    100% { border-color: transparent; }
-}
-
-/* Estilo para o título */
-#typed-text {
-    font-size: 3.5rem; 
-    color: white; 
-    font-weight: 600; 
-    text-align: center; 
-    text-transform: uppercase; 
-    animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite; 
-    overflow: hidden; 
-    border-right: 4px solid #fff; 
-    white-space: nowrap; 
-}
-
-/**/
 
 /*****************Media Queries************************/
 
+
+
+
+
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-    .row {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 10px;
-    }
 
-    .d-flex {
-        text-align: justify;
-        justify-content: center;
-    }
 
-    .navbar-brand {
-        font-size: 13px;
-    }
+/* Para dispositivos com largura máxima de 375px e altura máxima de 667px */
 
-    .paragrafo {
-        font-size: 18px;
-    }
 
-    .display-4 {
-        font-size: 3.5em;
-    }
 
-    img {
-        width: 330px; /* Ajustado de 'px' para '330px' */
-        border: 1px solid rgb(0, 0, 0);
-    }
+/* iPhone SE (375 x 667) */
+@media (width: 375px) and (height: 667px) {
+    /* Estilos exclusivos para iPhone SE */
+
+    .container {
+        line-height: 1.5rem;
+        
+  }
+  img {
+    width: 240px; 
+    
+}
+#typed-text {
+    font-size: 1.5rem; /* Ajuste para telas muito pequenas */
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .row {
-        text-align: center;
-        margin-top: 50px;
-    }
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
 
-    .navbar-brand {
-        font-size: 16px;
-    }
+ }
 
-    .d-flex {
-        text-align: justify;
-        justify-content: center;
-    }
 
+  
+  /* iPhone XR (414 x 896) */
+  @media (width: 414px) and (height: 896px) {
+    /* Estilos exclusivos para iPhone XR */
+
+    
+    .container {
+        line-height: 3.5rem;
+        
+  }
+  img {
+    width: 300px; 
+    
+}
+#typed-text {
+    font-size: 1.7rem; /* Ajuste para telas muito pequenas */
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+
+ }
+
+  
+  
+  /* iPhone 12 Pro (390 x 844) */
+  @media (width: 390px) and (height: 844px) {
+    /* Estilos exclusivos para iPhone 12 Pro */
+
+    .container {
+        line-height: 2.8rem;
+        
+  }
+  img {
+    width: 300px; 
+    
+}
+#typed-text {
+    font-size: 1.7rem; /* Ajuste para telas muito pequenas */
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+
+ }
+  
+  
+  /* iPhone 14 Pro Max (430 x 932) */
+  @media (width: 430px) and (height: 932px) {
+    /* Estilos exclusivos para iPhone 14 Pro Max */
+
+    .container {
+        line-height: 3.5rem;
+        
+  }
+  img {
+    width: 310px; 
+    
+}
+#typed-text {
+    font-size: 1.7rem; /* Ajuste para telas muito pequenas */
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+  }
+  
+  /* Samsung Galaxy S8+ (360 x 740) */
+  @media (width: 360px) and (height: 740px) {
+    /* Estilos exclusivos para Samsung Galaxy S8+ */
+
+    .container {
+        line-height: 1.8rem;
+        
+  }
+  img {
+    width: 255px; 
+    
+}
+#typed-text {
+    font-size: 1.5rem; /* Ajuste para telas muito pequenas */
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+  }
+  
+  /* Samsung Galaxy S20 Ultra (412 x 915) */
+  @media (width: 412px) and (height: 915px) {
+    /* Estilos exclusivos para Samsung Galaxy S20 Ultra */
+    .container {
+        line-height: 3.6rem;
+        
+  }
+  img {
+    width: 300px; 
+    
+}
+#typed-text {
+    font-size: 1.8rem; /* Ajuste para telas muito pequenas */
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+  }
+
+  /* iPad Mini (768 x 1024) */
+@media (width: 768px) and (height: 1024px) {
+    /* Estilos exclusivos para iPad Mini */
+    #typed-text {
+        font-size: 28px;} 
+    img {
+        width: 300px;
+    }
+    
+    }
+  
+  /* iPad Air (820 x 1180) */
+@media (width: 820px) and (height: 1180px) {
+    /* Estilos exclusivos para iPad Air */
+
+    #typed-text {
+        font-size: 28px;} 
+    img {
+        width: 300px;
+    }
+    
+    
+   }
+
+
+   /* iPad Pro */
+@media (width: 1024px) and (height: 1366px) {
+    /* Estilos exclusivos para iPad Pro */
+    #typed-text {
+        font-size: 2rem;} 
+    img {
+        width: 300px;
+    }
+    
+  }
+  
+  /* Surface Pro 7 */
+  @media (width: 912px) and (height: 1368px) {
+    /* Estilos exclusivos para Surface Pro 7 */
+
+    #typed-text {
+        font-size: 2rem;} 
+    img {
+        width: 300px;
+    }
+  }
+  
+  /* Surface Duo (tela única) */
+  @media (width: 540px) and (height: 720px) {
+    /* Estilos exclusivos para Surface Duo */
+
+       
+    .container {
+        line-height: 0.5rem;
+        
+  }
+  img {
+    width: 300px; 
+    
+}
+#typed-text {
+    font-size: 2rem; /* Ajuste para telas muito pequenas */
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+  }
+  
+  /* Galaxy Fold (dobrado) */
+  @media (width: 280px) and (height: 653px) {
+    /* Estilos exclusivos para Galaxy Fold dobrado */
+
+         
+    .container {
+        line-height: 1rem;
+        
+  }
+  img {
+    width: 200px; 
+    
+}
+#typed-text {
+    font-size: 18px; /* Ajuste para telas muito pequenas */
+}
+.paragrafo {
+    font-size: 12px;
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+
+.btn-custom {
+    font-size: 13px;
+}
+  }
+
+  .redes-sociais {
+    font-size: 10px;
+  }
+  
+ 
+  /* Asus Zenbook Fold */
+  @media (width: 853px) and (height: 1280px) {
+    /* Estilos exclusivos para Asus Zenbook Fold */
+
+    #typed-text {
+        font-size: 2rem;} 
+    img {
+        width: 300px;
+    }
+  }
+  
+  /* Samsung Galaxy A51/A71 */
+  @media (width: 412px) and (height: 914px) {
+    /* Estilos exclusivos para Samsung Galaxy A51/A71 */
+
+    .container {
+        line-height: 3.5rem;
+        
+  }
+  img {
+    width: 350px; 
+    
+}
+#typed-text {
+    font-size: 1.8rem; /* Ajuste para telas muito pequenas */
+}
+.paragrafo {
+    font-size: 16px;
+}
+#projetos {
+    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+    padding: 60px 0; /* Adiciona espaçamento suficiente */
+}
+
+.btn-custom {
+    font-size: 19px;
+}
+  }
+
+  .redes-sociais {
+    font-size: 19px;
+  }
+  
+  
+  
+  /* Nest Hub */
+  @media (width: 1024px) and (height: 600px) {
+    /* Estilos exclusivos para Nest Hub */
+
+    .container {
+        line-height: 3.7rem;
+    }
+    #typed-text {
+        font-size: 2rem;} 
     img {
         width: 350px;
     }
-}
+  }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .row {
-        text-align: center;
-        margin-top: 50px;
-    }
 
-    .d-flex {
-        text-align: justify;
-        justify-content: center;
-        margin-top: 50px;
-    }
-
-    img {
-        width: 355px;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+/*Large devices (desktops, 992px and up) */
+@media (min-width: 1025px) and (max-width: 1199.98px) {
     .d-flex {
         text-align: justify;
         justify-content: center;
@@ -514,7 +722,7 @@ footer {
     }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/*Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .d-flex {
         text-align: justify;
@@ -523,35 +731,20 @@ footer {
     }
 
     .img {
-        width: 400px;
+        width: 300px;
     }
-}
+    
+    .container {
+        line-height: 3.4rem;
+    }
 
-/* Responsividade para dispositivos menores */
-@media (max-width: 1200px) {
     #typed-text {
-        font-size: 2rem; /* Menor tamanho para tablets */
+        font-size: 2.5rem; 
     }
 }
 
-@media (max-width: 992px) {
-    #typed-text {
-        font-size: 2.5rem; /* Menor tamanho para telas menores */
-    }
-}
 
-@media (max-width: 576px) {
-    #typed-text {
-        font-size: 1.5rem; /* Ajuste para telas muito pequenas */
-    }
-}
 
-@media (max-height: 600px) {
-    #projetos {
-        height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-        padding: 60px 0; /* Adiciona espaçamento suficiente */
-    }
-}
 
 
 
