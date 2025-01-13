@@ -20,6 +20,7 @@
 }
 
 
+
 /* Definindo a fonte personalizada */
 body {
     font-family: 'Poppins', sans-serif;
@@ -29,9 +30,10 @@ body {
         background-color: #f8f9fa;
         margin: 0;
         padding: 0;
-  
+ 
 
 }
+
 
 /* Estilo para o título */
 #typed-text {
@@ -78,6 +80,62 @@ body {
     
 
 /* Configurações Logo*/
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #9b59b6; /* Cor roxa ao passar o mouse */
+    transform: translateY(-2px); /* Leve movimento para cima */
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; 
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; 
+}
+
+/**/
 
 .navbar-brand {
     font-family: "Lego Brix";
@@ -393,358 +451,139 @@ footer {
     padding: 20px 0;
 }
 
-
-/*****************Media Queries************************/
-
-
-
-
-
-/* Extra small devices (portrait phones, less than 576px) */
-
-
-/* Para dispositivos com largura máxima de 375px e altura máxima de 667px */
-
-
-
-/* iPhone SE (375 x 667) */
-@media (width: 375px) and (height: 667px) {
-    /* Estilos exclusivos para iPhone SE */
-
-    .container {
-        line-height: 1.5rem;
+@media only screen and (max-width: 300px) {
+    
+.container {
+        line-height: 1.2rem;
         
   }
   img {
-    width: 240px; 
-    
-}
-#typed-text {
-    font-size: 1.5rem; /* Ajuste para telas muito pequenas */
-}
-
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-
- }
-
-
-  
-  /* iPhone XR (414 x 896) */
-  @media (width: 414px) and (height: 896px) {
-    /* Estilos exclusivos para iPhone XR */
-
-    
-    .container {
-        line-height: 3.5rem;
-        
-  }
-  img {
-    width: 300px; 
-    
-}
-#typed-text {
-    font-size: 1.7rem; /* Ajuste para telas muito pequenas */
-}
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-
- }
-
-  
-  
-  /* iPhone 12 Pro (390 x 844) */
-  @media (width: 390px) and (height: 844px) {
-    /* Estilos exclusivos para iPhone 12 Pro */
-
-    .container {
-        line-height: 2.8rem;
-        
-  }
-  img {
-    width: 300px; 
-    
-}
-#typed-text {
-    font-size: 1.7rem; /* Ajuste para telas muito pequenas */
-}
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-
- }
-  
-  
-  /* iPhone 14 Pro Max (430 x 932) */
-  @media (width: 430px) and (height: 932px) {
-    /* Estilos exclusivos para iPhone 14 Pro Max */
-
-    .container {
-        line-height: 3.5rem;
-        
-  }
-  img {
-    width: 310px; 
-    
-}
-#typed-text {
-    font-size: 1.7rem; /* Ajuste para telas muito pequenas */
-}
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-  }
-  
-  /* Samsung Galaxy S8+ (360 x 740) */
-  @media (width: 360px) and (height: 740px) {
-    /* Estilos exclusivos para Samsung Galaxy S8+ */
-
-    .container {
-        line-height: 1.8rem;
-        
-  }
-  img {
-    width: 255px; 
-    
-}
-#typed-text {
-    font-size: 1.5rem; /* Ajuste para telas muito pequenas */
-}
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-  }
-  
-  /* Samsung Galaxy S20 Ultra (412 x 915) */
-  @media (width: 412px) and (height: 915px) {
-    /* Estilos exclusivos para Samsung Galaxy S20 Ultra */
-    .container {
-        line-height: 3.6rem;
-        
-  }
-  img {
-    width: 300px; 
-    
-}
-#typed-text {
-    font-size: 1.8rem; /* Ajuste para telas muito pequenas */
-}
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-  }
-
-  /* iPad Mini (768 x 1024) */
-@media (width: 768px) and (height: 1024px) {
-    /* Estilos exclusivos para iPad Mini */
-    #typed-text {
-        font-size: 28px;} 
-    img {
-        width: 300px;
-    }
-    
-    }
-  
-  /* iPad Air (820 x 1180) */
-@media (width: 820px) and (height: 1180px) {
-    /* Estilos exclusivos para iPad Air */
+    width: 198px; 
+} 
 
     #typed-text {
-        font-size: 28px;} 
-    img {
-        width: 300px;
+        font-size: 0.8rem; /* Ajuste para telas muito pequenas */
     }
-    
-    
-   }
-
-
-   /* iPad Pro */
-@media (width: 1024px) and (height: 1366px) {
-    /* Estilos exclusivos para iPad Pro */
-    #typed-text {
-        font-size: 2rem;} 
-    img {
-        width: 300px;
-    }
-    
-  }
+    #projetos {
+        height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+        padding: 60px 0; /* Adiciona espaçamento suficiente */
+    }  
   
-  /* Surface Pro 7 */
-  @media (width: 912px) and (height: 1368px) {
-    /* Estilos exclusivos para Surface Pro 7 */
+}
 
-    #typed-text {
-        font-size: 2rem;} 
-    img {
-        width: 300px;
-    }
-  }
-  
-  /* Surface Duo (tela única) */
-  @media (width: 540px) and (height: 720px) {
-    /* Estilos exclusivos para Surface Duo */
 
-       
-    .container {
-        line-height: 0.5rem;
-        
-  }
-  img {
-    width: 300px; 
+
+
+@media only screen and (min-width: 301px) and (max-width: 375px) {
+    
+        .container {
+                line-height: 1.6rem;
+                
+          }
+          img {
+            width: 220px; } 
+            #typed-text {
+                font-size: 1.5rem; /* Ajuste para telas muito pequenas */
+            }
+            #projetos {
+                height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+                padding: 60px 0; /* Adiciona espaçamento suficiente */
+            }
+             
+            }
+
+@media only screen and (min-width: 376px) and (max-width: 450px) {
+    
+        .container {
+                line-height: 4rem;
+                
+          }
+          img {
+            width: 250px; } 
+            #typed-text {
+                font-size: 1.7rem; /* Ajuste para telas muito pequenas */
+            }
+            #projetos {
+                height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
+                padding: 60px 0; /* Adiciona espaçamento suficiente */
+            }
+             
+            }
+
+           
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+img {
+    width: 250px;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {.container {
+    line-height: 4rem;
     
 }
+img {
+width: 300px; } 
 #typed-text {
     font-size: 2rem; /* Ajuste para telas muito pequenas */
 }
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-  }
-  
-  /* Galaxy Fold (dobrado) */
-  @media (width: 280px) and (height: 653px) {
-    /* Estilos exclusivos para Galaxy Fold dobrado */
 
-         
-    .container {
-        line-height: 1rem;
-        
-  }
-  img {
-    width: 200px; 
-    
-}
-#typed-text {
-    font-size: 18px; /* Ajuste para telas muito pequenas */
-}
-.paragrafo {
-    font-size: 12px;
-}
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
-}
-
-.btn-custom {
-    font-size: 13px;
-}
-  }
-
-  .redes-sociais {
-    font-size: 10px;
-  }
-  
  
-  /* Asus Zenbook Fold */
-  @media (width: 853px) and (height: 1280px) {
-    /* Estilos exclusivos para Asus Zenbook Fold */
-
-    #typed-text {
-        font-size: 2rem;} 
-    img {
-        width: 300px;
-    }
-  }
-  
-  /* Samsung Galaxy A51/A71 */
-  @media (width: 412px) and (height: 914px) {
-    /* Estilos exclusivos para Samsung Galaxy A51/A71 */
-
-    .container {
-        line-height: 3.5rem;
-        
-  }
-  img {
-    width: 350px; 
-    
-}
-#typed-text {
-    font-size: 1.8rem; /* Ajuste para telas muito pequenas */
-}
-.paragrafo {
-    font-size: 16px;
-}
-#projetos {
-    height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
-    padding: 60px 0; /* Adiciona espaçamento suficiente */
 }
 
-.btn-custom {
-    font-size: 19px;
-}
-  }
-
-  .redes-sociais {
-    font-size: 19px;
-  }
-  
-  
-  
-  /* Nest Hub */
-  @media (width: 1024px) and (height: 600px) {
-    /* Estilos exclusivos para Nest Hub */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 993px) and (max-width: 1200px){
 
     .container {
         line-height: 3.7rem;
-    }
-    #typed-text {
-        font-size: 2rem;} 
-    img {
-        width: 350px;
-    }
+        
   }
-
-
-/*Large devices (desktops, 992px and up) */
-@media (min-width: 1025px) and (max-width: 1199.98px) {
-    .d-flex {
-        text-align: justify;
-        justify-content: center;
-        margin-top: 50px;
-    }
-
-    .row {
-        text-align: center;
-    }
-
-    .img {
-        width: 350px;
-    }
-}
-
-/*Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .d-flex {
-        text-align: justify;
-        justify-content: center;
-        margin-top: 50px;
-    }
-
-    .img {
-        width: 300px;
-    }
-    
-    .container {
-        line-height: 3.4rem;
-    }
-
+  img {
+    width: 350px; } 
     #typed-text {
-        font-size: 2.5rem; 
+        font-size: 2rem; /* Ajuste para telas muito pequenas */
     }
-}
+   
+     
+    }
 
 
+    @media only screen and (min-width: 1201px) and (max-width: 1280px) {
+        .container {
+            line-height: 7.5rem;
+            
+      }
+      #typed-text {
+        font-size: 2.5rem; /* Ajuste para telas muito pequenas */
+    }
+    img {
+        width: 400px; } 
+    }
 
 
+    @media only screen and (min-width: 1281px)  {
 
+.container {
+            line-height: 4.6rem;
+            
+      }
+      #typed-text {
+        font-size: 2.7rem; /* Ajuste para telas muito pequenas */
+    }
+    }
 
+    
