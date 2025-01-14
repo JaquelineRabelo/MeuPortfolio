@@ -39,7 +39,7 @@ body {
 #typed-text {
     font-size: 1.8rem; /* Fonte um pouco menor */
     font-weight: 600; /* Peso da fonte */
-    text-align: center; /* Centralizado */
+    text-align: justify; /* Centralizado */
     text-transform: uppercase; /* Letras maiúsculas */
     animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite; /* Combinação das animações */
     overflow: hidden; /* Oculta o texto até a animação começar */
