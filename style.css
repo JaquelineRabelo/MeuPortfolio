@@ -33,11 +33,11 @@ body {
     font-size: 1.8rem; /* Fonte um pouco menor */
     font-weight: 600; /* Peso da fonte */
     text-align: justify; /* Centralizado */
-    text-transform: uppercase; /* Letras maiúsculas */
+    text-transform: uppercase; 
     animation: typing 3s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite; /* Combinação das animações */
-    overflow: hidden; /* Oculta o texto até a animação começar */
-    border-right: 4px solid #fff; /* Efeito de cursor */
-    white-space: nowrap; /* Impedir a quebra de linha */
+    overflow: hidden; 
+    border-right: 4px solid #fff; 
+    white-space: nowrap; 
 }
 
 /* Setinhas */
