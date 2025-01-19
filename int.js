@@ -23,10 +23,10 @@ function switchToPortuguese() {
         <br><br>
         Com 9 anos de experiência em gestão no ambiente empresarial, desenvolvi uma forte capacidade de lidar com desafios e trabalhar em equipe. Essa experiência me ajuda a trazer uma perspectiva única para o desenvolvimento de soluções inovadoras. Convido você a explorar meu portfólio e acompanhar meu crescimento nesta nova fase, onde tecnologia e criatividade se encontram.
     `;
-    
+
     document.getElementById('projects-title').textContent = 'Projetos';
     document.getElementById('projects-description').textContent = 'Confira alguns dos projetos em que trabalhei:';    
-    
+
     // Traduções dos cards
     document.getElementById('project1-title').textContent = 'Clínica Renovar';
     document.getElementById('project1-description').textContent = 'Projeto de site. Tecnologias utilizadas incluem HTML5, CSS3, Bootstrap e JavaScript.';
@@ -68,11 +68,17 @@ function switchToPortuguese() {
     // Seção de Rodapé
     document.getElementById('footer-social').textContent = 'Siga-me nas redes sociais:';
     document.getElementById('footer-rights').textContent = '© 2025 Jaqueline Rabelo. Todos os direitos reservados.';
+
+    // Seção do Perfil
+    document.querySelector('.card-title').textContent = 'Perfil'; // Título do perfil
+    document.getElementById('name-label').textContent = 'Nome:'; // Atualiza o rótulo do nome
+    document.querySelector('.info-text p:nth-child(2)').innerHTML = '<strong>Grau Atual:</strong> Estudante de Análise e Desenvolvimento de Sistemas.'; // Atualiza grau atual
+    document.querySelector('.info-text p:nth-child(3)').innerHTML = '<strong>Educação:</strong> Mestre em Gestão e Graduada em Administração de Empresas.'; // Atualiza educação
 }
 
 function switchToEnglish() {
     // Tradução para Inglês
-    document.getElementById('typed-text').textContent = 'Hi, I am Jaqueline!'; // Título da seção Home
+    document.getElementById('typed-text').textContent = 'Hello, I am Jaqueline!'; // Título da seção Home
     document.querySelector('.paragrafo').textContent = 'Junior Software Developer and Master in Management.'; // Parágrafo adicionado
     document.getElementById('my-journey-title').textContent = 'My Journey';
     document.getElementById('my-journey-text').innerHTML = `
@@ -80,7 +86,7 @@ function switchToEnglish() {
         <br><br>
         With 9 years of experience in management in the business environment, I have developed a strong ability to deal with challenges and work in a team. This background helps me bring a unique perspective to the development of innovative solutions. I invite you to explore my portfolio and follow my growth in this new phase, where technology and creativity meet.
     `;
-    
+
     document.getElementById('projects-title').textContent = 'Projects';
     document.getElementById('projects-description').textContent = 'Check out some of the projects I have worked on:';
     
@@ -125,6 +131,12 @@ function switchToEnglish() {
     // Seção de Rodapé
     document.getElementById('footer-social').textContent = 'Follow me on social media:';
     document.getElementById('footer-rights').textContent = '© 2025 Jaqueline Rabelo. All rights reserved.';
+
+    // Seção do Perfil
+    document.querySelector('.card-title').textContent = 'Profile'; // Título do perfil
+    document.getElementById('name-label').textContent = 'Name:'; // Atualiza o rótulo do nome
+    document.querySelector('.info-text p:nth-child(2)').innerHTML = '<strong>Current Degree:</strong> Student of Analysis and Development of Systems.'; // Atualiza grau atual
+    document.querySelector('.info-text p:nth-child(3)').innerHTML = '<strong>Education:</strong> Master in Management and Graduate in Business Administration.'; // Atualiza educação
 }
 
 
