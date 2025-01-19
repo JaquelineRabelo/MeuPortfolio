@@ -1,3 +1,133 @@
+// JavaScript para alternar entre inglês e português
+const languageToggle = document.getElementById('language-toggle');
+
+languageToggle.addEventListener('click', () => {
+    const isEnglish = languageToggle.textContent === 'EN';
+    
+    if (isEnglish) {
+        languageToggle.textContent = 'PT'; // Muda o texto do botão para PT
+        switchToPortuguese();
+    } else {
+        languageToggle.textContent = 'EN'; // Muda o texto do botão para EN
+        switchToEnglish();
+    }
+});
+
+function switchToPortuguese() {
+    // Tradução para Português
+    document.getElementById('typed-text').textContent = 'Olá, eu sou Jaqueline!'; // Título da seção Home
+    document.querySelector('.paragrafo').textContent = 'Desenvolvedora de Software Júnior e Mestre em Gestão.'; // Parágrafo adicionado
+    document.getElementById('my-journey-title').textContent = 'Minha Jornada';
+    document.getElementById('my-journey-text').innerHTML = `
+        Estou em uma jornada emocionante no mundo do Desenvolvimento Web, onde minha paixão por tecnologia se transforma em habilidades práticas. Atualmente, estou aprimorando meu conhecimento em HTML, CSS e JavaScript para criar experiências digitais que sejam funcionais e atraentes.
+        <br><br>
+        Com 9 anos de experiência em gestão no ambiente empresarial, desenvolvi uma forte capacidade de lidar com desafios e trabalhar em equipe. Essa experiência me ajuda a trazer uma perspectiva única para o desenvolvimento de soluções inovadoras. Convido você a explorar meu portfólio e acompanhar meu crescimento nesta nova fase, onde tecnologia e criatividade se encontram.
+    `;
+    
+    document.getElementById('projects-title').textContent = 'Projetos';
+    document.getElementById('projects-description').textContent = 'Confira alguns dos projetos em que trabalhei:';    
+    
+    // Traduções dos cards
+    document.getElementById('project1-title').textContent = 'Clínica Renovar';
+    document.getElementById('project1-description').textContent = 'Projeto de site. Tecnologias utilizadas incluem HTML5, CSS3, Bootstrap e JavaScript.';
+    document.getElementById('project1-link').textContent = 'Ver Projeto';
+
+    document.getElementById('project2-title').textContent = 'Calculadora';
+    document.getElementById('project2-description').textContent = 'Descrição do projeto. Focado na usabilidade e design responsivo.';
+    document.getElementById('project2-link').textContent = 'Ver Projeto';
+
+    document.getElementById('project3-title').textContent = 'Projeto 3';
+    document.getElementById('project3-description').textContent = 'Descrição do projeto. Focado na usabilidade e design responsivo.';
+    document.getElementById('project3-link').textContent = 'Ver Projeto';
+
+    // Mudança do botão "About Me" para "Sobre Mim"
+    document.getElementById('about-me-button').textContent = 'Sobre Mim';
+
+    // Seção Habilidades
+    document.getElementById('skills-title').textContent = 'Habilidades';
+    document.getElementById('skills-description').textContent = 'Descubra as tecnologias e ferramentas que uso:';
+
+    // Tradução da seção Header
+    document.querySelector('.navbar-brand').textContent = 'Portfólio';
+    document.querySelector('a[data-lang="about"]').textContent = 'Sobre Mim';
+    document.querySelector('a[data-lang="projects"]').textContent = 'Projetos';
+    document.querySelector('a[data-lang="skills"]').textContent = 'Habilidades';
+    document.querySelector('a[data-lang="contact"]').textContent = 'Contato';
+
+    // Seção de Contato
+    document.getElementById('contact-title').textContent = 'Contato';
+    document.getElementById('contact-description').textContent = 'Entre em contato comigo para mais informações!';
+    document.getElementById('name-label').textContent = 'Nome';
+    document.getElementById('inputName').placeholder = 'Seu Nome';
+    document.getElementById('email-label').textContent = 'Email';
+    document.getElementById('inputEmail').placeholder = 'Seu Email';
+    document.getElementById('message-label').textContent = 'Mensagem';
+    document.getElementById('inputMessage').placeholder = 'Sua Mensagem';
+    document.getElementById('submit-button').textContent = 'Enviar';
+
+    // Seção de Rodapé
+    document.getElementById('footer-social').textContent = 'Siga-me nas redes sociais:';
+    document.getElementById('footer-rights').textContent = '© 2025 Jaqueline Rabelo. Todos os direitos reservados.';
+}
+
+function switchToEnglish() {
+    // Tradução para Inglês
+    document.getElementById('typed-text').textContent = 'Hi, I am Jaqueline!'; // Título da seção Home
+    document.querySelector('.paragrafo').textContent = 'Junior Software Developer and Master in Management.'; // Parágrafo adicionado
+    document.getElementById('my-journey-title').textContent = 'My Journey';
+    document.getElementById('my-journey-text').innerHTML = `
+        I am on an exciting journey in the world of Web Development, where my passion for technology transforms into practical skills. Currently, I am enhancing my knowledge in HTML, CSS, and JavaScript to create digital experiences that are both functional and appealing.
+        <br><br>
+        With 9 years of experience in management in the business environment, I have developed a strong ability to deal with challenges and work in a team. This background helps me bring a unique perspective to the development of innovative solutions. I invite you to explore my portfolio and follow my growth in this new phase, where technology and creativity meet.
+    `;
+    
+    document.getElementById('projects-title').textContent = 'Projects';
+    document.getElementById('projects-description').textContent = 'Check out some of the projects I have worked on:';
+    
+    // Traduções dos cards
+    document.getElementById('project1-title').textContent = 'Clínica Renovar';
+    document.getElementById('project1-description').textContent = 'Website project. Technologies used include HTML5, CSS3, Bootstrap, and JavaScript.';
+    document.getElementById('project1-link').textContent = 'View Project';
+
+    document.getElementById('project2-title').textContent = 'Calculator';
+    document.getElementById('project2-description').textContent = 'Project description. Focused on usability and responsive design.';
+    document.getElementById('project2-link').textContent = 'View Project';
+
+    document.getElementById('project3-title').textContent = 'Project 3';
+    document.getElementById('project3-description').textContent = 'Project description. Focused on usability and responsive design.';
+    document.getElementById('project3-link').textContent = 'View Project';
+
+    // Mudança do botão "Sobre Mim" para "About Me"
+    document.getElementById('about-me-button').textContent = 'About Me';
+
+    // Seção Habilidades
+    document.getElementById('skills-title').textContent = 'Skills';
+    document.getElementById('skills-description').textContent = 'Discover the technologies and tools I use:';
+
+    // Tradução da seção Header
+    document.querySelector('.navbar-brand').textContent = 'Portfolio';
+    document.querySelector('a[data-lang="about"]').textContent = 'About Me';
+    document.querySelector('a[data-lang="projects"]').textContent = 'Projects';
+    document.querySelector('a[data-lang="skills"]').textContent = 'Skills';
+    document.querySelector('a[data-lang="contact"]').textContent = 'Contact';
+
+    // Seção de Contato
+    document.getElementById('contact-title').textContent = 'Contact';
+    document.getElementById('contact-description').textContent = 'Get in touch with me for more information!';
+    document.getElementById('name-label').textContent = 'Name';
+    document.getElementById('inputName').placeholder = 'Your Name';
+    document.getElementById('email-label').textContent = 'Email';
+    document.getElementById('inputEmail').placeholder = 'Your Email';
+    document.getElementById('message-label').textContent = 'Message';
+    document.getElementById('inputMessage').placeholder = 'Your Message';
+    document.getElementById('submit-button').textContent = 'Send';
+
+    // Seção de Rodapé
+    document.getElementById('footer-social').textContent = 'Follow me on social media:';
+    document.getElementById('footer-rights').textContent = '© 2025 Jaqueline Rabelo. All rights reserved.';
+}
+
+
 // Seleciona os elementos necessários
 const navbar = document.getElementById('navbar');
 const toggler = document.getElementById('menu-toggler');

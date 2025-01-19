@@ -17,7 +17,60 @@
     50% { border-color: white; }
     100% { border-color: transparent; }
 }
+.language-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
 
+.language-label {
+    margin: 0 10px;
+    font-size: 10px;
+    color: #dcd1df;
+}
+
+.language-toggle {
+    position: relative;
+    width: 35px;
+    height: 27px;
+}
+
+.language-toggle-checkbox {
+    opacity: 0; /* Oculta a checkbox real */
+    width: 0;
+    height: 0;
+}
+
+.language-toggle-label {
+    cursor: pointer;
+    background-color: #5f85ff;
+    border-radius: 50px; /* Canto arredondado para a barra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    transition: background-color 0.3s;
+    margin-top: -11px;
+}
+
+.language-toggle-ball {
+    position: absolute;
+    top: 33%;
+    left: -1px;
+    width: 15px; /* Tamanho da bolinha */
+    height: 15px;
+    background-color: white;
+    border-radius: 50%; /* Bolinha arredondada */
+    transition: transform 0.3s;
+}
+
+.language-toggle-checkbox:checked + .language-toggle-label {
+    background-color: #cb9ed4; /* Cor da barra quando ativado */
+}
+
+.language-toggle-checkbox:checked + .language-toggle-label .language-toggle-ball {
+    transform: translateX(30px); /* Move a bolinha para a direita */
+}
 /* Definindo a fonte personalizada */
 body {
     font-family: 'Poppins', sans-serif;
@@ -243,6 +296,7 @@ a {
 .container p {
     text-align: center; /* Centraliza o texto do parágrafo */
     margin-bottom: 30px; /* Espaçamento inferior */
+    font-size: 20px;
 }
 
 
@@ -633,6 +687,10 @@ footer {
     height: auto;
   }
 
+  .container p {
+    font-size: 12px;
+  }
+
  
 }
 
@@ -651,6 +709,7 @@ footer {
             #typed-text {
                 font-size: 1.5rem; /* Ajuste para telas muito pequenas */
                 margin-top: 10px;
+                text-align: center;
             }
             #projetos {
                 height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
@@ -664,13 +723,14 @@ footer {
                     margin-top: 50px;
                 }
             
-.paragrafo{
+.container p{
     font-size: 12px;
 }
 .btn-roxo {
     margin-top: 10px;
+
 }
-            }
+        }
 
             
             
@@ -685,7 +745,7 @@ footer {
             width: 250px; 
         }
             #typed-text {
-                font-size: 1.7rem; /* Ajuste para telas muito pequenas */
+                font-size: 1.5rem; /* Ajuste para telas muito pequenas */
             }
             #projetos {
                 height: auto; /* Deixa a altura dinâmica em telas muito pequenas */
@@ -700,6 +760,17 @@ footer {
             .paragrafo {
                 font-size: 0.9rem;
             }
+
+            .container p {
+                text-align: center;
+                margin-bottom: 33px;
+                font-size: 15px; 
+            line-height: 13px;}
+
+                #typed-text {
+                    font-size: 1.7rem;
+                    text-align: center;
+                }
         }
             
             
@@ -707,7 +778,7 @@ footer {
            
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 451px) and (max-width: 600px) {
 
         .card {
             margin: 10px auto; /* Centraliza o card em telas pequenas */
@@ -728,6 +799,16 @@ footer {
             #home {
                 height: auto;
             }
+            .container p {
+                text-align: center;
+                margin-bottom: 33px;
+                font-size: 18px; 
+            line-height: 18px;}
+
+                #typed-text {
+                    font-size: 2rem;
+                    text-align: center;
+                }
  
               
             }
@@ -735,7 +816,7 @@ footer {
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (min-width: 601px) and (max-width: 767px) {
 
 
     .redes-sociais {
@@ -811,7 +892,7 @@ footer {
     }
 
   #home .container {
-    padding: 100px;
+    padding: 80px;
    
   }
   #home {
@@ -831,7 +912,9 @@ width: 300px;
 } 
 #typed-text {
     font-size: 2rem;
-} }
+}   .container p {
+    font-size: 15px;
+}}
 
 
  
@@ -852,7 +935,14 @@ width: 300px;
     #home {
       
        
-        padding: 100px;
+        padding: 70px;
+    }
+
+    #typed-text {
+        font-size: 2.7rem;
+    }
+    .container p {
+        font-size: 15px;
     }
     }
 
@@ -861,7 +951,7 @@ width: 300px;
      
     
       #typed-text {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     img {
         width: 400px; } 
@@ -872,6 +962,9 @@ width: 300px;
           .col-md-6 {
            
             padding: 120px;
+        }
+        .container p {
+            font-size: 15px;
         }
     }
 

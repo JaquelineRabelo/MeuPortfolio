@@ -28,54 +28,63 @@
 <body>
 <!------------Inicio Cabeçalho--------------------->
 <header>
-    <nav class="navbar navbar-expand-md navbar-primary fixed-top" id="navbar"> <!-- Adicionado fixed-top -->
+    <div class="language-toggle-container">
+        <span class="language-label" id="language-en">EN</span>
+        <div class="language-toggle">
+            <input type="checkbox" id="language-toggle" class="language-toggle-checkbox" />
+            <label class="language-toggle-label" for="language-toggle">
+                <span class="language-toggle-ball"></span>
+            </label>
+        </div>
+        <span class="language-label" id="language-pt">PT</span>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-primary fixed-top" id="navbar">
         <div class="container" id="Cabeçalho">
-            <a href="#" class="navbar-brand">Portifólio</a>
+            <a href="#" class="navbar-brand">Portfolio</a>
     
-            <!-- configuração menu hamburguer -->
             <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal" id="menu-toggler">
                 <i class="fas fa-solid fa-bars text-white"></i>
             </button>
     
             <div class="collapse navbar-collapse" id="nav-principal">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="#sobre" class="nav-link">Sobre mim</a></li>
-                    <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contatos</a></li>
+                    <li class="nav-item"><a href="#sobre" class="nav-link" data-lang="about">About Me</a></li>
+                    <li class="nav-item"><a href="#projetos" class="nav-link" data-lang="projects">Projects</a></li>
+                    <li class="nav-item"><a href="#habilidades" class="nav-link" data-lang="skills">Skills</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link" data-lang="contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<!--------------------Início Main-------------------->
+
+<!--------------------Start Main-------------------->
 <main>
-   
- <!-------------------------------Inicio Home-------------------->
- <section id="home" >
 
-    
-    <div class="container"> <!-- Início container -->
- 
-        <div class="row"> <!-- Início row -->
-            <div class="col-md-6 col-12 d-flex"> <!-- Início texto -->
-                <div class="align-self-center"> <!-- Div para centralizar o conteúdo -->
-                    <h1 class="display-4" id="typed-text">Olá, eu sou a Jaqueline!</h1>
-                    <p class="paragrafo">Software Developer Junior e mestre em Gestão.</p>
-                    <a href="#sobre" class="btn btn-lg btn-custom btn-roxo">Sobre mim</a>
+<section id="home" >
+
+    <div class="container"> 
+
+        <div class="row">
+            <div class="col-md-6 col-12 d-flex"> 
+                <div class="align-self-center"> 
+                    <h1 class="display-4" id="typed-text">Hi, I'm Jaqueline!</h1>
+                    <p class="paragrafo">Junior Software Developer and Master in Management.</p>
+                    <a href="#sobre" class="btn btn-lg btn-custom btn-roxo" id="about-me-button">About Me</a>
+
                     <br><br>
-                </div> <!-- Fim div para centralizar o conteúdo -->
-            </div> <!-- Fim texto -->
+                </div>
+            </div>
 
-            <div class="col-md-6 col-12 d-flex justify-content-center"> <!-- Início imagem -->
-                <div class="align-self-center img-custom"> <!-- Ajustando a classe aqui -->
+            <div class="col-md-6 col-12 d-flex justify-content-center"> 
+                <div class="align-self-center img-custom">
                     <img src="./imagem/ig.4d.png" 
                          width="350px" 
                          alt="Jaqueline" 
                          class="hoverable-image"
                          style="border-radius: 300px;">
                     <p class="redes-sociais">
-                        Redes sociais
+                        Social Media 
                         <a href="https://www.linkedin.com/in/jaquelinerabelo/" target="_blank" class="btn btn-outline-light">
                             <i class="fab fa-linkedin fa-md"></i>
                         </a>
@@ -84,191 +93,161 @@
                         </a>
                     </p>
                 </div>
-            </div> <!-- Fim imagem -->
-        </div> <!-- Fim row --> 
-        <!-- Partículas -->
-    <div id="particles-home"></div>
-    </div> <!-- Fim container -->
+            </div>
+        </div> 
+        <div id="particles-home"></div>
+    </div> 
    
 </section>
 
-
-
-<!--------------------Sobre mim-------------------->
-<section id="sobre" class="reveal sobre-section"> <!-- Início sobre -->
-    <!-- Contêiner para as partículas -->
+<section id="sobre" class="reveal sobre-section">
     <div id="particles-js" class="particles-container"></div>
 
-    <!-- Conteúdo Principal -->
     <div class="container sobre-container"> 
-        <div class="row sobre-row"> <!-- Início row -->
-            
-            <!-- Coluna Esquerda: Minha Jornada -->
-            <div class="col-md-6 d-flex sobre-coluna"> <!-- Início coluna -->
-                <div class="align-self-center card-text"> <!-- Card de texto -->
-                    <h2 class="card-title">Minha Jornada</h2>
+        <div class="row sobre-row"> 
+            <div class="col-md-6 d-flex sobre-coluna"> 
+                <div class="align-self-center card-text"> 
+                    <h2 class="card-title" id="my-journey-title">My Journey</h2> 
                     <button id="toggleJornada" class="toggle-button">
-                        Mostrar Detalhes
+                        Show Details 
                     </button>
                     <div id="jornadaDetails" class="jornada-details">
-                        <p style="text-align: justify;">
-                            Estou em uma jornada empolgante no universo do Desenvolvimento Web, onde minha paixão por tecnologia se transforma em habilidades práticas. Atualmente, estou aprimorando meu conhecimento em HTML, CSS e JavaScript para criar experiências digitais que sejam ao mesmo tempo funcionais e atraentes.
-
-
+                        <p style="text-align: justify;" id="my-journey-text">
+                            I am on an exciting journey in the world of Web Development, where my passion for technology transforms into practical skills. Currently, I am enhancing my knowledge in HTML, CSS, and JavaScript to create digital experiences that are both functional and appealing.
                         </p>
                         <p style="text-align: justify;">
-                            Com 9 anos de experiência em gestão no ambiente empresarial, desenvolvi uma forte capacidade de lidar com desafios e de trabalhar em equipe. Essa bagagem me ajuda a trazer uma perspectiva única para o desenvolvimento de soluções inovadoras. Convido você a explorar meu portfólio e acompanhar meu crescimento nesta nova fase, onde a tecnologia e a criatividade se encontram.
+                            With 9 years of experience in management in the business environment, I have developed a strong ability to deal with challenges and work in a team. This background helps me bring a unique perspective to the development of innovative solutions. I invite you to explore my portfolio and follow my growth in this new phase, where technology and creativity meet.
                         </p>
                     </div>
-                </div> <!-- Fim Card de texto -->
-            </div> <!-- Fim coluna -->
+                </div> 
+            </div> 
 
-            <!-- Coluna Direita: Perfil -->
-            <div class="col-md-6 d-flex sobre-coluna"> <!-- Início coluna -->
-                <div class="align-self-center card-info"> <!-- Card de informações -->
-                    <h2 class="card-title">Perfil</h2>
-                    <img src="./imagem/sobre.jpg"  class="hoverable-image" class="clickable-image" alt="Imagem de perfil" class="profile-image">
+            <div class="col-md-6 d-flex sobre-coluna"> 
+                <div class="align-self-center card-info"> 
+                    <h2 class="card-title">Profile</h2>
+                    <img src="./imagem/sobre.jpg"  class="hoverable-image clickable-image" alt="Profile Image" class="profile-image">
                     <div class="info-text">
-                        <p><strong>Nome:</strong> Jaqueline Rabelo</p>
-                        <p><strong>Graduação Atual:</strong> Estudante de Análise e Desenvolvimento de Sistemas.</p>
-                        <p><strong>Formação:</strong> Mestre em Gestão e Graduada em Administração de Empresas.</p>
+                        <p><strong id="name-label">Name:</strong> Jaqueline Rabelo</p>
+                        <p><strong>Current Degree:</strong> Student of Analysis and Development of Systems.</p> 
+                        <p><strong>Education:</strong> Master in Management and Graduate in Business Administration.</p>
                     </div>
-                </div> <!-- Fim Card de informações -->
-            </div> <!-- Fim coluna -->
+                </div> 
+            </div> 
 
-        </div> <!-- Fim row -->
-    </div> <!-- Fim container -->
-</section> <!-- Fim sobre -->
+        </div> 
+    </div> 
+</section> 
 
-
-<!-----------------Projetos-------------------->
 <section id="projetos" class="reveal">
     <div class="container">
-        <h2 class="section-title">Projetos</h2>
-        <p>Confira alguns dos projetos em que trabalhei:</p>
+        <h2 class="section-title" id="projects-title">Projects</h2> 
+        <p id="projects-description">Check out some of the projects I have worked on:</p> 
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <img src="./imagem/renovar.png" class="card-img-top" alt="Clínica Renovar">
                     <div class="card-body">
-                        <h5 class="card-title">Clínica Renovar</h5>
-                        <p class="card-text">Projeto de website. Tecnologias empregadas incluem HTML5, CSS3, Bootstrap e JavaScript.</p>
-                        <a href="https://jaquelinerabelo.github.io/projeto-renovar/" class="btn btn-roxo">Ver projeto</a>
+                        <h5 class="card-title" id="project1-title">Clínica Renovar</h5>
+                        <p class="card-text" id="project1-description">Website project. Technologies used include HTML5, CSS3, Bootstrap, and JavaScript.</p>
+                        <a href="https://jaquelinerabelo.github.io/projeto-renovar/" class="btn btn-roxo" id="project1-link">View Project</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="./imagem/breve.jpg" class="card-img-top" alt="App Calculadora">
+                    <img src="./imagem/breve.jpg" class="card-img-top" alt="App Calculator">
                     <div class="card-body">
-                        <h5 class="card-title">Calculadora</h5>
-                        <p class="card-text">Descrição do projeto. Focado em usabilidade e design responsivo.</p>
-                        <a href="#" class="btn btn-roxo">Ver projeto</a>
+                        <h5 class="card-title" id="project2-title">Calculator</h5> 
+                        <p class="card-text" id="project2-description">Project description. Focused on usability and responsive design.</p> 
+                        <a href="#" class="btn btn-roxo" id="project2-link">View Project</a> 
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="./imagem/breve.jpg" class="card-img-top" alt="Projeto 3">
+                    <img src="./imagem/breve.jpg" class="card-img-top" alt="Project 3">
                     <div class="card-body">
-                        <h5 class="card-title">Projeto 3</h5>
-                        <p class="card-text">Descrição do projeto. Focado em usabilidade e design responsivo.</p>
-                        <a href="#" class="btn btn-roxo">Ver projeto</a>
+                        <h5 class="card-title" id="project3-title">Project 3</h5> 
+                        <p class="card-text" id="project3-description">Project description. Focused on usability and responsive design.</p> 
+                        <a href="#" class="btn btn-roxo" id="project3-link">View Project</a> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section> <!-- Fim da seção Projetos -->
+</section> 
 
-<!------------------Habilidades--------------------->
 <section id="habilidades" class="reveal">
-  <div class="container">
-      <h2 class="section-title">Habilidades</h2>
-      <p>Conheça as tecnologias e ferramentas que utilizo:</p>
-      <div class="row justify-content-center">
-          <!-- HTML -->
-          <div class="col-6 col-md-2 text-center">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">
-              <p>HTML5</p>
-          </div>
-          <!-- CSS -->
-          <div class="col-6 col-md-2 text-center">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon">
-              <p>CSS3</p>
-          </div>
-          <div class="col-6 col-md-2 text-center">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
-            <p>JavaScript</p>
-        </div>
-        <!-- Bootstrap -->
-        <div class="col-6 col-md-2 text-center">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon">
-            <p>Bootstrap</p>
-        </div>
-        <!-- C# -->
-        <div class="col-6 col-md-2 text-center">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon">
-            <p>C#</p>
+    <div class="container">
+        <h2 class="section-title" id="skills-title">Skills</h2> 
+        <p id="skills-description">Discover the technologies and tools I use:</p> 
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-2 text-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">
+                <p>HTML5</p>
+            </div>
+            <div class="col-6 col-md-2 text-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon">
+                <p>CSS3</p>
+            </div>
+            <div class="col-6 col-md-2 text-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+                <p>JavaScript</p>
+            </div>
+            <div class="col-6 col-md-2 text-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon">
+                <p>Bootstrap</p>
+            </div>
+            <div class="col-6 col-md-2 text-center">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon">
+                <p>C#</p>
+            </div>
         </div>
     </div>
-</div>
-</div> 
-</section><!--fim habilidades-->
+</section>
 
-  <!-----------------Contato-------------------->
-  <section id="contact" class="reveal">
+<section id="contact" class="reveal">
     <div class="container">
-        <h2 class="section-title">Contato</h2>
-        <p>Entre em contato comigo para mais informações!</p>
+        <h2 class="section-title" id="contact-title">Contact</h2>
+        <p id="contact-description">Get in touch with me for more information!</p> 
         <form>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputName">Nome</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Seu Nome">
+                    <label for="inputName" id="name-label">Name</label> 
+                    <input type="text" class="form-control" id="inputName" placeholder="Your Name"> 
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputEmail">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Seu Email">
+                    <label for="inputEmail" id="email-label">Email</label> 
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Your Email"> 
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputMessage">Mensagem</label>
-                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Sua Mensagem"></textarea>
+                <label for="inputMessage" id="message-label">Message</label> 
+                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Your Message"></textarea> 
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary" id="submit-button">Send</button> 
         </form>
     </div>
 </section>
-         
-  </div>
-</div>
-</section> <!--fim contatos-->
 
-</main> <!--Fim Main------->
-
-
-<!------------------Rodapé------------------------------->
 <footer class="custom-footer">
     <div class="container">
-            <!-- Redes Sociais -->
+        <div class="col-12">
+            <p id="footer-social">Follow me on social media:</p> 
+            <a href="https://www.linkedin.com/in/jaquelinerabelo/" target="_blank" class="social-icon linkedin">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/jaquelinerabelo" target="_blank" class="social-icon github">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://instagram.com/jaquelineecavalcanti" target="_blank" class="social-icon instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+        <div class="row text-center">
             <div class="col-12">
-                <p>Siga-me nas redes sociais:</p>
-                <a href="https://www.linkedin.com/in/jaquelinerabelo/" target="_blank" class="social-icon linkedin">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="https://github.com/jaquelinerabelo" target="_blank" class="social-icon github">
-                    <i class="bi bi-github"></i>
-                </a>
-                <a href="https://instagram.com/jaquelineecavalcanti" target="_blank" class="social-icon instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
+                <p id="footer-rights">© 2025 Jaqueline Rabelo. All rights reserved.</p> 
             </div>
-            <div class="row text-center">
-                <!-- Direitos Reservados -->
-                <div class="col-12">
-                    <p>© 2025 Jaqueline Rabelo. Todos os direitos reservados.</p>
-                </div>
         </div>
     </div>
 </footer>
