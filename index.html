@@ -27,14 +27,13 @@
 </head>
 <body>
 <!------------Inicio Cabeçalho--------------------->
-<header> 
-
-    <nav class="navbar navbar-expand-md navbar-primary fixed-top"> <!-- Adicionado fixed-top -->
+<header>
+    <nav class="navbar navbar-expand-md navbar-primary fixed-top" id="navbar"> <!-- Adicionado fixed-top -->
         <div class="container" id="Cabeçalho">
             <a href="#" class="navbar-brand">Portifólio</a>
     
-            <!-- configuração menu hamburguer-->
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+            <!-- configuração menu hamburguer -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal" id="menu-toggler">
                 <i class="fas fa-solid fa-bars text-white"></i>
             </button>
     
@@ -48,7 +47,7 @@
             </div>
         </div>
     </nav>
-</header> <!--Fim Cabeçalho-->
+</header>
 <!--------------------Início Main-------------------->
 <main>
    
@@ -70,7 +69,11 @@
 
             <div class="col-md-6 col-12 d-flex justify-content-center"> <!-- Início imagem -->
                 <div class="align-self-center img-custom"> <!-- Ajustando a classe aqui -->
-                    <img src="./imagem/ig.4d.png" width="350px" alt="Jaqueline" style="border-radius: 300px;">
+                    <img src="./imagem/ig.4d.png" 
+                         width="350px" 
+                         alt="Jaqueline" 
+                         class="hoverable-image"
+                         style="border-radius: 300px;">
                     <p class="redes-sociais">
                         Redes sociais
                         <a href="https://www.linkedin.com/in/jaquelinerabelo/" target="_blank" class="btn btn-outline-light">
@@ -124,7 +127,7 @@
             <div class="col-md-6 d-flex sobre-coluna"> <!-- Início coluna -->
                 <div class="align-self-center card-info"> <!-- Card de informações -->
                     <h2 class="card-title">Perfil</h2>
-                    <img src="./imagem/sobre.jpg" alt="Imagem de perfil" class="profile-image">
+                    <img src="./imagem/sobre.jpg"  class="hoverable-image" class="clickable-image" alt="Imagem de perfil" class="profile-image">
                     <div class="info-text">
                         <p><strong>Nome:</strong> Jaqueline Rabelo</p>
                         <p><strong>Graduação Atual:</strong> Estudante de Análise e Desenvolvimento de Sistemas.</p>

@@ -51,6 +51,16 @@ body {
     gap: 10px;
     z-index: 1000;
 }
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Cor ao abrir o menu hambúrguer */
+.navbar.expanded {
+    background: linear-gradient(135deg, #342d35, #dcaaf2f6); /* Fundo gradiente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
 
 .navigation-dots .dot {
     width: 12px;
@@ -74,7 +84,7 @@ img {
 
 
     .navbar {
-        background: linear-gradient(135deg, #2c3e5029, #964caf35); 
+        background: linear-gradient(135deg, #291b33a4, #49245594); 
         box-shadow: 0 4px 8px rgba(225, 216, 216, 0.053); /* Sombra para destaque */
     }
 
@@ -237,7 +247,25 @@ a {
 
 
 /*sobre*****************************************************************************/
+.clickable-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza os efeitos */
+    cursor: pointer; /* Mostra que a imagem é interativa */
+}
 
+/* Efeito ao clicar na imagem */
+.clickable-image:active {
+    transform: scale(1.05); /* Leve aumento no tamanho */
+    box-shadow: 0 0 20px 5px rgba(243, 243, 233, 0.8); /* Brilho dourado */
+    cursor: crosshair; /* Muda o cursor para uma cruz */
+}
+.hoverable-image {
+    transition: transform 0.3s ease; /* Suaviza o movimento */
+    cursor: pointer; /* Mostra que é interativo */
+}
+
+.hoverable-image:hover {
+    transform: translate(5px, 5px); /* Move levemente para a diagonal */
+}
 #sobre{
     background-attachment: fixed;
 }

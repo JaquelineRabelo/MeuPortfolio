@@ -1,3 +1,20 @@
+// Seleciona os elementos necessários
+const navbar = document.getElementById('navbar');
+const toggler = document.getElementById('menu-toggler');
+const navPrincipal = document.getElementById('nav-principal');
+
+// Adiciona um evento ao botão do menu hambúrguer
+toggler.addEventListener('click', () => {
+    // Verifica se o menu está expandido
+    if (navPrincipal.classList.contains('show')) {
+        navbar.classList.remove('expanded'); // Remove a classe quando fecha
+    } else {
+        navbar.classList.add('expanded'); // Adiciona a classe quando abre
+    }
+});
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Selecionar os elementos
   const toggleButton = document.getElementById('toggleJornada');
