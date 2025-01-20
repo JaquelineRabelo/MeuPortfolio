@@ -68,8 +68,8 @@
         <div class="row">
             <div class="col-md-6 col-12 d-flex"> 
                 <div class="align-self-center"> 
-                    <h1 class="display-4" id="typed-text">Hello, I am Jaqueline!</h1>
-                    <p class="paragrafo">Junior Software Developer and Master in Management.</p>
+                    <h1 class="display-4" id="typed-text">Hi, I'm Jaqueline!</h1>
+                    <p class="paragrafo">Software Developer and Master in Management.</p>
                     <a href="#sobre" class="btn btn-lg btn-custom btn-roxo" id="about-me-button">About Me</a>
 
                     <br><br>
@@ -113,18 +113,19 @@
                     </button>
                     <div id="jornadaDetails" class="jornada-details">
                         <p style="text-align: justify;" id="my-journey-text">
-                            I am on an exciting journey in the world of Web Development, where my passion for technology transforms into practical skills. Currently, I am enhancing my knowledge in HTML, CSS, and JavaScript to create digital experiences that are both functional and appealing.
-                        </p>
-                        <p style="text-align: justify;">
+                            I am on an exciting journey in the world of Web Development, where my passion for technology transforms into practical skills. Currently, I am enhancing my knowledge in HTML, CSS, and JavaScript to create digital experiences that are both functional and appealing. 
+                            <br>
+                            <br>
                             With 9 years of experience in management in the business environment, I have developed a strong ability to deal with challenges and work in a team. This background helps me bring a unique perspective to the development of innovative solutions. I invite you to explore my portfolio and follow my growth in this new phase, where technology and creativity meet.
-                        </p>
+                    
+                        
                     </div>
                 </div> 
             </div> 
 
             <div class="col-md-6 d-flex sobre-coluna"> 
                 <div class="align-self-center card-info"> 
-                    <h2 class="card-title">Profile</h2>
+                    <h2 class="card-title2">Profile</h2>
                     <img src="./imagem/sobre.jpg" class="hoverable-image clickable-image" alt="Profile Image" class="profile-image">
                     <div class="info-text">
                         <p><strong id="name-label">Name:</strong> Jaqueline Rabelo</p>
@@ -140,42 +141,44 @@
 
 <section id="projetos" class="reveal">
     <div class="container">
-        <h2 class="section-title" id="projects-title">Projects</h2> 
-        <p id="projects-description">Check out some of the projects I have worked on:</p> 
+        <h2 class="section-title" id="projects-title">Projects</h2>
+        <p id="projects-description">Check out some of the projects I have worked on:</p>
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card mb-4 shadow-sm">
                     <img src="./imagem/renovar.png" class="card-img-top" alt="Clínica Renovar">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
                         <h5 class="card-title" id="project1-title">Clínica Renovar</h5>
                         <p class="card-text" id="project1-description">Website project. Technologies used include HTML5, CSS3, Bootstrap, and JavaScript.</p>
                         <a href="https://jaquelinerabelo.github.io/projeto-renovar/" class="btn btn-roxo" id="project1-link">View Project</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="./imagem/breve.jpg" class="card-img-top" alt="App Calculator">
-                    <div class="card-body">
-                        <h5 class="card-title" id="project2-title">Calculator</h5> 
-                        <p class="card-text" id="project2-description">Project description. Focused on usability and responsive design.</p> 
-                        <a href="#" class="btn btn-roxo" id="project2-link">View Project</a> 
+                    <img src="./imagem/calculator.png" class="card-img-top" alt="App Calculator">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <h5 class="card-title" id="project2-title">Calculator</h5>
+                        <p class="card-text" id="project2-description">Functional calculator developed with HTML, CSS, and JavaScript that performs basic operations such as addition, subtraction, multiplication, and division.</p>
+                        <a href="https://jaquelinerabelo.github.io/app-calculator/" class="btn btn-roxo" id="project2-link">View Project</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4">
+            <div class="col-12 col-sm-6 col-lg-4">
                 <div class="card mb-4 shadow-sm">
                     <img src="./imagem/breve.jpg" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title" id="project3-title">Project 3</h5> 
-                        <p class="card-text" id="project3-description">Project description. Focused on usability and responsive design.</p> 
-                        <a href="#" class="btn btn-roxo" id="project3-link">View Project</a> 
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <h5 class="card-title" id="project3-title">Project 3</h5>
+                        <p class="card-text" id="project3-description">Project description. Focused on usability and responsive design.</p>
+                        <a href="#" class="btn btn-roxo" id="project3-link">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section> 
+</section>
+
+
 
 <section id="habilidades" class="reveal">
     <div class="container">
@@ -276,7 +279,39 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 
+<script>  document.addEventListener('DOMContentLoaded', () => {
+    // Selecionar os elementos
+    const toggleButton = document.getElementById('toggleJornada');
+    const jornadaDetails = document.getElementById('jornadaDetails');
+    const languageToggle = document.getElementById('language-toggle'); // O checkbox que alterna o idioma
 
+    // Configurar o estado inicial
+    if (toggleButton && jornadaDetails) {
+        jornadaDetails.style.display = 'none'; // Esconde os detalhes inicialmente
+        toggleButton.textContent = 'Show Details'; // Texto inicial em 
+
+        // Adicionar evento de clique
+        toggleButton.addEventListener('click', function () {
+            if (jornadaDetails.style.display === 'none') {
+                jornadaDetails.style.display = 'block';
+                this.textContent = languageToggle.checked ? 'Oculta Detalhes' : 'Hide Details'; // Atualiza o texto com base no idioma
+            } else {
+                jornadaDetails.style.display = 'none';
+                this.textContent = languageToggle.checked ? 'Mostrar Detalhes' : 'Show Details'; // Atualiza o texto com base no idioma
+            }
+        });
+    }
+
+    // Lógica para alternar idiomas
+    languageToggle.addEventListener('change', () => {
+        const isEnglish = languageToggle.checked; // Verifica se o idioma está definido como inglês
+        if (isEnglish) {
+            toggleButton.textContent = jornadaDetails.style.display === 'block' ? 'Hide Details' : 'Show Details'; // Atualiza o texto do botão
+        } else {
+            toggleButton.textContent = jornadaDetails.style.display === 'block' ? 'Ocultar Detalhes' : 'Mostrar Detalhes'; // Atualiza o texto do botão
+        }
+    });
+});</script>
 </body>
 
 

@@ -13,6 +13,41 @@ languageToggle.addEventListener('click', () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecionar os elementos
+    const toggleButton = document.getElementById('toggleJornada');
+    const jornadaDetails = document.getElementById('jornadaDetails');
+    const languageToggle = document.getElementById('language-toggle'); // O checkbox que alterna o idioma
+
+    // Configurar o estado inicial
+    if (toggleButton && jornadaDetails) {
+        jornadaDetails.style.display = 'none'; // Esconde os detalhes inicialmente
+        toggleButton.textContent = 'Mostrar Detalhes'; // Texto inicial em português
+
+        // Adicionar evento de clique
+        toggleButton.addEventListener('click', function () {
+            if (jornadaDetails.style.display === 'none') {
+                jornadaDetails.style.display = 'block';
+                this.textContent = languageToggle.checked ? 'Hide Details' : 'Ocultar Detalhes'; // Atualiza o texto com base no idioma
+            } else {
+                jornadaDetails.style.display = 'none';
+                this.textContent = languageToggle.checked ? 'Show Details' : 'Mostrar Detalhes'; // Atualiza o texto com base no idioma
+            }
+        });
+    }
+
+    // Lógica para alternar idiomas
+    languageToggle.addEventListener('change', () => {
+        const isEnglish = languageToggle.checked; // Verifica se o idioma está definido como inglês
+        if (isEnglish) {
+            toggleButton.textContent = jornadaDetails.style.display === 'block' ? 'Hide Details' : 'Show Details'; // Atualiza o texto do botão
+        } else {
+            toggleButton.textContent = jornadaDetails.style.display === 'block' ? 'Ocultar Detalhes' : 'Mostrar Detalhes'; // Atualiza o texto do botão
+        }
+    });
+});
+
+
 function switchToPortuguese() {
     // Tradução para Português
     document.getElementById('typed-text').textContent = 'Olá, eu sou Jaqueline!'; // Título da seção Home
@@ -33,7 +68,7 @@ function switchToPortuguese() {
     document.getElementById('project1-link').textContent = 'Ver Projeto';
 
     document.getElementById('project2-title').textContent = 'Calculadora';
-    document.getElementById('project2-description').textContent = 'Descrição do projeto. Focado na usabilidade e design responsivo.';
+    document.getElementById('project2-description').textContent = 'Calculadora funcional desenvolvida com HTML, CSS e JavaScript que realiza operações básicas como adição, subtração, multiplicação e divisão.';
     document.getElementById('project2-link').textContent = 'Ver Projeto';
 
     document.getElementById('project3-title').textContent = 'Projeto 3';
@@ -45,7 +80,7 @@ function switchToPortuguese() {
 
     // Seção Habilidades
     document.getElementById('skills-title').textContent = 'Habilidades';
-    document.getElementById('skills-description').textContent = 'Descubra as tecnologias e ferramentas que uso:';
+    document.getElementById('skills-description').textContent = 'Tecnologias e ferramentas que uso:';
 
     // Tradução da seção Header
     document.querySelector('.navbar-brand').textContent = 'Portfólio';
@@ -64,39 +99,43 @@ function switchToPortuguese() {
     document.getElementById('message-label').textContent = 'Mensagem';
     document.getElementById('inputMessage').placeholder = 'Sua Mensagem';
     document.getElementById('submit-button').textContent = 'Enviar';
+    
+
 
     // Seção de Rodapé
     document.getElementById('footer-social').textContent = 'Siga-me nas redes sociais:';
     document.getElementById('footer-rights').textContent = '© 2025 Jaqueline Rabelo. Todos os direitos reservados.';
 
     // Seção do Perfil
-    document.querySelector('.card-title').textContent = 'Perfil'; // Título do perfil
+    document.querySelector('.card-title').textContent = 'Minha Jornada'; // Título do perfil
     document.getElementById('name-label').textContent = 'Nome:'; // Atualiza o rótulo do nome
     document.querySelector('.info-text p:nth-child(2)').innerHTML = '<strong>Grau Atual:</strong> Estudante de Análise e Desenvolvimento de Sistemas.'; // Atualiza grau atual
     document.querySelector('.info-text p:nth-child(3)').innerHTML = '<strong>Educação:</strong> Mestre em Gestão e Graduada em Administração de Empresas.'; // Atualiza educação
+    document.querySelector('.card-title2').textContent = 'Perfil';
 }
 
 function switchToEnglish() {
     // Tradução para Inglês
-    document.getElementById('typed-text').textContent = 'Hello, I am Jaqueline!'; // Título da seção Home
-    document.querySelector('.paragrafo').textContent = 'Junior Software Developer and Master in Management.'; // Parágrafo adicionado
+    document.getElementById('typed-text').textContent = 'Hi, I am Jaqueline!'; // Título da seção Home
+    document.querySelector('.paragrafo').textContent = 'Software Developer and Master in Management.'; // Parágrafo adicionado
     document.getElementById('my-journey-title').textContent = 'My Journey';
     document.getElementById('my-journey-text').innerHTML = `
         I am on an exciting journey in the world of Web Development, where my passion for technology transforms into practical skills. Currently, I am enhancing my knowledge in HTML, CSS, and JavaScript to create digital experiences that are both functional and appealing.
         <br><br>
         With 9 years of experience in management in the business environment, I have developed a strong ability to deal with challenges and work in a team. This background helps me bring a unique perspective to the development of innovative solutions. I invite you to explore my portfolio and follow my growth in this new phase, where technology and creativity meet.
+        
     `;
 
     document.getElementById('projects-title').textContent = 'Projects';
     document.getElementById('projects-description').textContent = 'Check out some of the projects I have worked on:';
     
     // Traduções dos cards
-    document.getElementById('project1-title').textContent = 'Clínica Renovar';
+    document.getElementById('project1-title').textContent = 'Clinic Renew';
     document.getElementById('project1-description').textContent = 'Website project. Technologies used include HTML5, CSS3, Bootstrap, and JavaScript.';
     document.getElementById('project1-link').textContent = 'View Project';
 
     document.getElementById('project2-title').textContent = 'Calculator';
-    document.getElementById('project2-description').textContent = 'Project description. Focused on usability and responsive design.';
+    document.getElementById('project2-description').textContent = 'Functional calculator developed with HTML, CSS, and JavaScript that performs basic operations such as addition, subtraction, multiplication, and division';
     document.getElementById('project2-link').textContent = 'View Project';
 
     document.getElementById('project3-title').textContent = 'Project 3';
@@ -105,10 +144,11 @@ function switchToEnglish() {
 
     // Mudança do botão "Sobre Mim" para "About Me"
     document.getElementById('about-me-button').textContent = 'About Me';
+    document.getElementById('about-me-button').textContent = 'About Me';
 
     // Seção Habilidades
     document.getElementById('skills-title').textContent = 'Skills';
-    document.getElementById('skills-description').textContent = 'Discover the technologies and tools I use:';
+    document.getElementById('skills-description').textContent = 'The technologies and tools I use:';
 
     // Tradução da seção Header
     document.querySelector('.navbar-brand').textContent = 'Portfolio';
@@ -130,14 +170,19 @@ function switchToEnglish() {
 
     // Seção de Rodapé
     document.getElementById('footer-social').textContent = 'Follow me on social media:';
-    document.getElementById('footer-rights').textContent = '© 2025 Jaqueline Rabelo. All rights reserved.';
+    document.getElementById('footer-rights').textContent = '© 2025 Jaqueline Rabelo. All rights reserved.'; 
 
     // Seção do Perfil
-    document.querySelector('.card-title').textContent = 'Profile'; // Título do perfil
+    document.querySelector('.card-title').textContent = 'My Journe'; // Título do perfil
     document.getElementById('name-label').textContent = 'Name:'; // Atualiza o rótulo do nome
     document.querySelector('.info-text p:nth-child(2)').innerHTML = '<strong>Current Degree:</strong> Student of Analysis and Development of Systems.'; // Atualiza grau atual
     document.querySelector('.info-text p:nth-child(3)').innerHTML = '<strong>Education:</strong> Master in Management and Graduate in Business Administration.'; // Atualiza educação
+    document.querySelector('.card-title2').textContent = 'Profile'; 
+
+
 }
+
+
 
 
 // Seleciona os elementos necessários
@@ -165,16 +210,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (toggleButton && jornadaDetails) {
       // Configurar o estado inicial
       jornadaDetails.style.display = 'none'; // Esconde os detalhes inicialmente
-      toggleButton.textContent = 'Mostrar Detalhes'; // Define o texto inicial
+      toggleButton.textContent = 'Show Details'; // Define o texto inicial
 
       // Adicionar evento de clique
       toggleButton.addEventListener('click', function () {
           if (jornadaDetails.style.display === 'none') {
               jornadaDetails.style.display = 'block';
-              this.textContent = 'Ocultar Detalhes';
+              this.textContent = 'Hide Details';
           } else {
               jornadaDetails.style.display = 'none';
-              this.textContent = 'Mostrar Detalhes';
+              this.textContent = 'Show Details';
           }
       });
   }
@@ -303,3 +348,20 @@ document.addEventListener('DOMContentLoaded', () => {
       retina_detect: true
   });
 });
+
+//cards com 3 acima de 992px
+function updateProjectCardColumnsForLargeScreens() {
+    const projectCards = document.querySelectorAll('#projetos .row > div');
+    projectCards.forEach(card => {
+        card.classList.remove('col-12', 'col-sm-6'); // Remove classes antigas
+        card.classList.add('col-12', 'col-sm-6', 'col-lg-4'); // Adiciona novas classes
+    });
+}
+
+// Chama a função para ajustar as colunas
+updateProjectCardColumnsForLargeScreens();
+
+
+
+/**/ 
+
