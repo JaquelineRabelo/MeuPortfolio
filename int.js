@@ -365,3 +365,17 @@ updateProjectCardColumnsForLargeScreens();
 
 /**/ 
 
+function showConfirmationMessage() {
+    // Impede o envio do formulário para a ação padrão
+    event.preventDefault();
+    
+    // Exibe a mensagem de confirmação
+    document.getElementById('confirmation-message').style.display = 'block';
+    
+    // Envia o formulário após um pequeno atraso para que a mensagem apareça
+    setTimeout(function() {
+        document.getElementById('contact-form').submit();
+    }, 1000); // Atraso de 1 segundo antes de enviar o formulário
+
+    return false; // Impede o envio imediato do formulário
+}
