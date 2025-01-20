@@ -116,7 +116,8 @@ function switchToPortuguese() {
 
 function switchToEnglish() {
     // Tradução para Inglês
-    document.getElementById('typed-text').textContent = 'Hi, I am Jaqueline!'; // Título da seção Home
+    document.getElementById('typed-text').textContent = 'Hi, I\'m Jaqueline!'
+; // Título da seção Home
     document.querySelector('.paragrafo').textContent = 'Software Developer and Master in Management.'; // Parágrafo adicionado
     document.getElementById('my-journey-title').textContent = 'My Journey';
     document.getElementById('my-journey-text').innerHTML = `
@@ -364,35 +365,4 @@ updateProjectCardColumnsForLargeScreens();
 
 
 /**/ 
-async function showConfirmationMessage(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-    
-    const formData = new FormData(document.getElementById('contact-form')); // Cria um FormData com os dados do formulário
 
-    // Envia os dados do formulário usando Fetch
-    try {
-        const response = await fetch('https://formsubmit.co/jaqueline.raabelo@hotmail.com', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json' // Define que aceitamos resposta em JSON
-            }
-        });
-
-        if (response.ok) {
-            // Exibe a mensagem de confirmação
-            document.getElementById('confirmation-message').style.display = 'block';
-            
-            // Limpa o formulário após o envio
-            document.getElementById('contact-form').reset();
-        } else {
-            // Trate erros se necessário
-            alert('Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.');
-        }
-    } catch (error) {
-        // Trate o erro de rede se necessário
-        alert('Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.');
-    }
-
-    return false; // Impede o envio imediato do formulário
-}
