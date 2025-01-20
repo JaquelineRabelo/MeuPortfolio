@@ -71,8 +71,8 @@ function switchToPortuguese() {
     document.getElementById('project2-description').textContent = 'Calculadora funcional desenvolvida com HTML, CSS e JavaScript que realiza operações básicas como adição, subtração, multiplicação e divisão.';
     document.getElementById('project2-link').textContent = 'Ver Projeto';
 
-    document.getElementById('project3-title').textContent = 'Projeto 3';
-    document.getElementById('project3-description').textContent = 'Descrição do projeto. Focado na usabilidade e design responsivo.';
+    document.getElementById('project3-title').textContent = 'Registo-App';
+    document.getElementById('project3-description').textContent = 'Este é um projeto em C# para gerenciar o registo de clientes. Linguagem: C# Framework: ASP.NET Core.';
     document.getElementById('project3-link').textContent = 'Ver Projeto';
 
     // Mudança do botão "About Me" para "Sobre Mim"
@@ -138,8 +138,8 @@ function switchToEnglish() {
     document.getElementById('project2-description').textContent = 'Functional calculator developed with HTML, CSS, and JavaScript that performs basic operations such as addition, subtraction, multiplication, and division';
     document.getElementById('project2-link').textContent = 'View Project';
 
-    document.getElementById('project3-title').textContent = 'Project 3';
-    document.getElementById('project3-description').textContent = 'Project description. Focused on usability and responsive design.';
+    document.getElementById('project3-title').textContent = 'Registration-App';
+    document.getElementById('project3-description').textContent = 'This is a C# project to manage customer registration. Language: C# Framework: ASP.NET Core.';
     document.getElementById('project3-link').textContent = 'View Project';
 
     // Mudança do botão "Sobre Mim" para "About Me"
