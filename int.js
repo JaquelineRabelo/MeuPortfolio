@@ -364,7 +364,6 @@ updateProjectCardColumnsForLargeScreens();
 
 
 /**/ 
-
 async function showConfirmationMessage(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
     
