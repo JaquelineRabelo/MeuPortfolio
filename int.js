@@ -67,8 +67,8 @@ function switchToPortuguese() {
     document.getElementById('project1-description').textContent = 'Projeto de site. Tecnologias utilizadas incluem HTML5, CSS3, Bootstrap e JavaScript.';
     document.getElementById('project1-link').textContent = 'Ver Projeto';
 
-    document.getElementById('project2-title').textContent = 'Calculadora';
-    document.getElementById('project2-description').textContent = 'Calculadora funcional desenvolvida com HTML, CSS e JavaScript que realiza operações básicas como adição, subtração, multiplicação e divisão.';
+    document.getElementById('project2-title').textContent = 'Conversor';
+    document.getElementById('project2-description').textContent = 'Este é um site para conversão de moedas, desenvolvido com HTML, CSS, JavaScript e ASP.NET Core. Ele permite converter valores entre Real (BRL), Dólar (USD) e Euro (EUR) com taxas de câmbio pré-definidas.';
     document.getElementById('project2-link').textContent = 'Ver Projeto';
 
     document.getElementById('project3-title').textContent = 'Registo-App';
@@ -135,8 +135,8 @@ function switchToEnglish() {
     document.getElementById('project1-description').textContent = 'Website project. Technologies used include HTML5, CSS3, Bootstrap, and JavaScript.';
     document.getElementById('project1-link').textContent = 'View Project';
 
-    document.getElementById('project2-title').textContent = 'Calculator';
-    document.getElementById('project2-description').textContent = 'Functional calculator developed with HTML, CSS, and JavaScript that performs basic operations such as addition, subtraction, multiplication, and division';
+    document.getElementById('project2-title').textContent = 'converter';
+    document.getElementById('project2-description').textContent = 'This is a currency conversion website developed with HTML, CSS, JavaScript, and ASP.NET Core. It allows users to convert values between Brazilian Real (BRL), US Dollar (USD), and Euro (EUR) using predefined exchange rates.';
     document.getElementById('project2-link').textContent = 'View Project';
 
     document.getElementById('project3-title').textContent = 'Registration-App';
